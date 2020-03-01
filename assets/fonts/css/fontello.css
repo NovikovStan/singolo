@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?76402359');
-  src: url('../font/fontello.eot?76402359#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?76402359') format('woff2'),
-       url('../font/fontello.woff?76402359') format('woff'),
-       url('../font/fontello.ttf?76402359') format('truetype'),
-       url('../font/fontello.svg?76402359#fontello') format('svg');
+  src: url('../font/fontello.eot?13325884');
+  src: url('../font/fontello.eot?13325884#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?13325884') format('woff2'),
+       url('../font/fontello.woff?13325884') format('woff'),
+       url('../font/fontello.ttf?13325884') format('truetype'),
+       url('../font/fontello.svg?13325884#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?76402359#fontello') format('svg');
+    src: url('../font/fontello.svg?13325884#fontello') format('svg');
   }
 }
 */
@@ -55,11 +55,17 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-bubble:before { content: '\e800'; } /* '' */
-.icon-star:before { content: '\e801'; } /* '' */
-.icon-heart:before { content: '\e802'; } /* '' */
-.icon-bulb:before { content: '\e803'; } /* '' */
-.icon-pen:before { content: '\e804'; } /* '' */
+.icon-facebook:before { content: '\e800'; } /* '' */
+.icon-gplus-1:before { content: '\e801'; } /* '' */
+.icon-linkedin-1:before { content: '\e802'; } /* '' */
+.icon-twitter:before { content: '\e803'; } /* '' */
+.icon-twitter-1:before { content: '\e804'; } /* '' */
 .icon-right-open:before { content: '\e805'; } /* '' */
 .icon-left-open:before { content: '\e806'; } /* '' */
-.icon-phone:before { content: '\e807'; } /* '' */
+.icon-gplus-2:before { content: '\f05a'; } /* '' */
+.icon-facebook-1:before { content: '\f300'; } /* '' */
+.icon-twitter-bird:before { content: '\f303'; } /* '' */
+.icon-twitter-2:before { content: '\f309'; } /* '' */
+.icon-gplus:before { content: '\f30f'; } /* '' */
+.icon-linkedin:before { content: '\f318'; } /* '' */
+.icon-linkedin-2:before { content: '\f31a'; } /* '' */

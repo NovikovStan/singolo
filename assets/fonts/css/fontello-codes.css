@@ -1,9 +1,15 @@
 
-.icon-bubble:before { content: '\e800'; } /* '' */
-.icon-star:before { content: '\e801'; } /* '' */
-.icon-heart:before { content: '\e802'; } /* '' */
-.icon-bulb:before { content: '\e803'; } /* '' */
-.icon-pen:before { content: '\e804'; } /* '' */
+.icon-facebook:before { content: '\e800'; } /* '' */
+.icon-gplus-1:before { content: '\e801'; } /* '' */
+.icon-linkedin-1:before { content: '\e802'; } /* '' */
+.icon-twitter:before { content: '\e803'; } /* '' */
+.icon-twitter-1:before { content: '\e804'; } /* '' */
 .icon-right-open:before { content: '\e805'; } /* '' */
 .icon-left-open:before { content: '\e806'; } /* '' */
-.icon-phone:before { content: '\e807'; } /* '' */
+.icon-gplus-2:before { content: '\f05a'; } /* '' */
+.icon-facebook-1:before { content: '\f300'; } /* '' */
+.icon-twitter-bird:before { content: '\f303'; } /* '' */
+.icon-twitter-2:before { content: '\f309'; } /* '' */
+.icon-gplus:before { content: '\f30f'; } /* '' */
+.icon-linkedin:before { content: '\f318'; } /* '' */
+.icon-linkedin-2:before { content: '\f31a'; } /* '' */

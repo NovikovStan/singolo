@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'fontello';
-  src: url('./assets/font/fontello.eot?8972620');
+  src: url('./assets/font/fontello.eot');
   /* src: url('./font/fontello.eot?8972620#iefix') format('embedded-opentype'),
        url('./font/fontello.woff?8972620') format('woff'),
        url('./font/fontello.ttf?8972620') format('truetype'),
@@ -108,7 +108,7 @@ header li:not(:nth-child(1)):before {
 }
 
 .slider i:hover {
-  padding-bottom: 13px;
+  padding-bottom: 7px;
 
   color: darkred;
 }
