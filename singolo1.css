@@ -235,7 +235,7 @@ header li:not(:nth-child(1)):before {
 }
 
 .bg-blue {
-  background-image: url(assets/img/iphone-screen_blue1.png);
+  background-image: url(assets/img/iphone-screen_blue.png);
 }
 
 .iphone-button {
