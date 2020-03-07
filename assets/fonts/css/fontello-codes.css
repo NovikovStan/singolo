@@ -6,7 +6,9 @@
 .icon-twitter-1:before { content: '\e804'; } /* '' */
 .icon-right-open:before { content: '\e805'; } /* '' */
 .icon-left-open:before { content: '\e806'; } /* '' */
-.icon-gplus-2:before { content: '\f05a'; } /* '' */
+.icon-phone:before { content: '\e807'; } /* '' */
+.icon-location:before { content: '\e808'; } /* '' */
+.icon-mail:before { content: '\e809'; } /* '' */
 .icon-facebook-1:before { content: '\f300'; } /* '' */
 .icon-twitter-bird:before { content: '\f303'; } /* '' */
 .icon-twitter-2:before { content: '\f309'; } /* '' */

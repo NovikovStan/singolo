@@ -43,12 +43,6 @@
       "src": "zocial"
     },
     {
-      "uid": "c896fd4e287aebcf79803e0ece001ec1",
-      "css": "gplus-2",
-      "code": 61530,
-      "src": "mfglabs"
-    },
-    {
       "uid": "7132e1233bc16cd1b6efe7e29d3613a5",
       "css": "linkedin",
       "code": 62232,
@@ -88,6 +82,24 @@
       "uid": "d090355c31f497b61d676416c1fd39fb",
       "css": "twitter-2",
       "code": 62217,
+      "src": "entypo"
+    },
+    {
+      "uid": "5854855e963044f93b15738a5bb27a29",
+      "css": "phone",
+      "code": 59399,
+      "src": "entypo"
+    },
+    {
+      "uid": "a42b598e4298f3319b25a2702a02e7ff",
+      "css": "location",
+      "code": 59400,
+      "src": "entypo"
+    },
+    {
+      "uid": "e335adbc2d898c7d85d40c507796e7b4",
+      "css": "mail",
+      "code": 59401,
       "src": "entypo"
     }
   ]
