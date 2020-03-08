@@ -80,6 +80,11 @@ body {
 
 }
 
+.input-wrapper>*:focus {
+  outline: none;
+}
+
+
 .input-wrapper>*::placeholder {
   color: #f48c8f;
   font-size: 12px;
@@ -127,6 +132,11 @@ body {
 
 .contacts ul li {
   letter-spacing: 0.4px;
+}
+
+.contacts a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .contacts i {

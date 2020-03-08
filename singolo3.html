@@ -23,8 +23,8 @@
       </p>
       <form action="#">
         <div class="input-wrapper">
-          <input type="text" placeholder="Name (Required)" required />
-          <input type="email" placeholder="Email (Required)" required />
+          <input type="text" placeholder="Name (Required)" pattern="[A-Za-z]+\s*[A-Za-z]*" required />
+          <input type="email" placeholder="Email (Required)" pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b" required />
           <input type="text" placeholder="Subject" />
           <textarea
             name="project-details"
@@ -44,8 +44,8 @@
           </p>
           <ul>
             <li><i class="icon-location"></i>Elm St. 14/05 Lost City</li>
-            <li><i class="icon-phone"></i>03528 331 86 35</li>
-            <li><i class="icon-mail"></i>info@singolo.com</li>
+            <li><a href="tel:03528 331 86 35"><i class="icon-phone"></i>03528 331 86 35</a></li>
+            <li><a href="mailto:info@singolo.com"><i class="icon-mail"></i>info@singolo.com</a></li>
           </ul>
           <input type="submit" value="Submit">
         </section>
