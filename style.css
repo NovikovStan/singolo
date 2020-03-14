@@ -50,11 +50,6 @@ header {
   letter-spacing: -0.3px;
 }
 
-/* .logo p {
-  vertical-align: text-top;
-  letter-spacing: -0.3px;
-} */
-
 .logo span {
   color: #f06c64;
 }
@@ -89,8 +84,41 @@ header li:not(:nth-child(1)):before {
   font-size: 6px;
 }
 
+.hidden {
+  display: none!important;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 300;
+
+  display: flex;
+  align-items: center;
+   font-size: 16px;
+
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+.message {
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  background-color: #fff;
+}
+
+.modal-button {
+  width: 100%;
+
+  margin: 0 auto;
+}
+
 .slider {
-  padding: 0 40px;
+  position: relative;
   height: 600px;
   box-sizing: border-box;
   display: flex;
@@ -99,6 +127,16 @@ header li:not(:nth-child(1)):before {
 
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
+}
+
+.slider-nav {
+  width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 200;
 }
 
 .slider i {
@@ -121,10 +159,29 @@ header li:not(:nth-child(1)):before {
   margin-right: -3px;
 }
 
+.slider-page {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 0;
+}
+
+.slider-page-active {
+  z-index: 100;
+}
+
+.slider-2 {
+  height: 600px;
+  padding: 0 90px;
+  box-sizing: border-box;
+  background-color: #f06c64;
+}
+
 .iphone {
   width: 215px;
   height: 442px;
-  margin: -31px 107px 0 0;
+  margin: 40px 107px 0 0;
   padding-top: 16px;
   display: flex;
   flex-direction: column;
@@ -231,11 +288,17 @@ header li:not(:nth-child(1)):before {
 }
 
 .bg-yellow {
-  background-image: url(assets/img/iphone-screen_yellow.png);
+  background: url(assets/img/iphone-screen_yellow.png);
+  background-position: center center;
 }
 
 .bg-blue {
   background-image: url(assets/img/iphone-screen_blue.png);
+  background-position: center center;
+}
+
+.bg-black {
+  background: black;
 }
 
 .iphone-button {
@@ -366,7 +429,7 @@ header li:not(:nth-child(1)):before {
   line-height: 30px;
 }
 
-.portfolio input {
+.portfolio-nav-btn {
   padding: 0 6px;
   color: #767e9e;
   font-family: 'Lato', sans-serif;
@@ -379,19 +442,30 @@ header li:not(:nth-child(1)):before {
   border: 1px solid #666d89;
 }
 
-.portfolio input:not(:first-child) {
+.portfolio-nav-btn:not(:first-child) {
   margin-left: 4px;
 }
 
-.portfolio input:first-child,
-.portfolio input:nth-child(2) {
+.portfolio-nav-btn:first-child,
+.portfolio-nav-btn:nth-child(2) {
   padding: 0 7px;
 }
 
-.portfolio input:hover {
+.portfolio-nav-btn:hover {
   color: #dedede;
 
   cursor: pointer;
+  border-color: #dedede;
+}
+
+.portfolio-nav-btn:active {
+  outline: none;
+}
+
+.portfolio-nav-active {
+  color: #dedede;
+
+  outline: none;
   border-color: #dedede;
 }
 
@@ -405,7 +479,7 @@ header li:not(:nth-child(1)):before {
   margin-top: 19px;
 }
 
-.pictures img {
+.picture {
   width: 220px;
   height: 187px;
   overflow: hidden;
@@ -413,8 +487,13 @@ header li:not(:nth-child(1)):before {
 
 }
 
-.pictures img:not(:nth-child(4n)) {
+.picture:not(:nth-child(4n)) {
   margin-right: 20px;
+}
+
+.outlined {
+  box-sizing: border-box;
+  border: 5px solid #F06C64;
 }
 
 .about {
@@ -647,6 +726,14 @@ header li:not(:nth-child(1)):before {
 .contacts input:hover {
   cursor: pointer;
   color: black;
+}
+
+.contacts input[type="submit"]:focus {
+  outline: none;
+}
+
+.invalid-input {
+  outline: 3px solid red;
 }
 
 footer {

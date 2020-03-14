@@ -17,37 +17,48 @@
       <h1 class="logo">SINGOLO<span>*</span></h1>
       <nav class="menu">
         <ul>
-          <li class="active"><a href="#">home</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li class="active"><a href="#home">home</a></li>
+          <li><a href="#services">services</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <div class="modal hidden">
+        <div class="message">
+        </div>
+      </div>
       <section class="slider">
         <h2 hidden>Slider</h2>
-        <i class="icon-left-open"></i>
-        <div class="iphone iphone-vertical">
-          <div class="camera"></div>
-          <div class="speaker"></div>
-          <div class="screen bg-yellow"></div>
-          <div class="iphone-button">
-            <div class="square"></div>
+        <div class="slider-nav">
+          <i class="icon-left-open"></i>
+          <i class="icon-right-open"></i>
+        </div>
+        <div class="slider-page">
+          <img src="./assets/img/Slide-2.png" alt="iphones" />
+        </div>
+        <div class="slider-page slider-2 slider-page-active">
+          <div class="iphone iphone-vertical">
+            <div class="camera"></div>
+            <div class="speaker"></div>
+            <div class="screen bg-yellow bg-black"></div>
+            <div class="iphone-button">
+              <div class="square"></div>
+            </div>
+          </div>
+          <div class="iphone iphone-horisontal">
+            <div class="camera"></div>
+            <div class="speaker"></div>
+            <div class="screen bg-blue"></div>
+            <div class="iphone-button">
+              <div class="square"></div>
+            </div>
           </div>
         </div>
-        <div class="iphone iphone-horisontal">
-          <div class="camera"></div>
-          <div class="speaker"></div>
-          <div class="screen bg-blue"></div>
-          <div class="iphone-button">
-            <div class="square"></div>
-          </div>
-        </div>
-        <i class="icon-right-open"></i>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <h2>Our Services</h2>
         <p>
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -130,34 +141,38 @@
           </div>
         </section>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <h2>Portfolio</h2>
         <p>
           Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
           lacinia odio sem nec elit.
         </p>
         <nav>
-          <input type="button" value="All" />
-          <input type="button" value="Web Design" />
-          <input type="button" value="Graphic Design" />
-          <input type="button" value="Artwork" />
+          <input class="portfolio-nav-btn" type="button" value="All" />
+          <input class="portfolio-nav-btn" type="button" value="Web Design" />
+          <input
+            class="portfolio-nav-btn"
+            type="button"
+            value="Graphic Design"
+          />
+          <input class="portfolio-nav-btn" type="button" value="Artwork" />
         </nav>
         <div class="pictures">
-          <img src="assets/img/pic1.png" alt="art" />
-          <img src="assets/img/pic2.png" alt="art" />
-          <img src="assets/img/pic3.png" alt="art" />
-          <img src="assets/img/pic4.png" alt="art" />
-          <img src="assets/img/pic5.png" alt="art" />
-          <img src="assets/img/pic6.png" alt="art" />
-          <img src="assets/img/pic7.png" alt="art" />
-          <img src="assets/img/pic8.png" alt="art" />
-          <img src="assets/img/pic9.png" alt="art" />
-          <img src="assets/img/pic10.png" alt="art" />
-          <img src="assets/img/pic11.png" alt="art" />
-          <img src="assets/img/pic12.png" alt="art" />
+          <img class="picture" src="assets/img/pic1.png" alt="art" />
+          <img class="picture" src="assets/img/pic2.png" alt="art" />
+          <img class="picture" src="assets/img/pic3.png" alt="art" />
+          <img class="picture" src="assets/img/pic4.png" alt="art" />
+          <img class="picture" src="assets/img/pic5.png" alt="art" />
+          <img class="picture" src="assets/img/pic6.png" alt="art" />
+          <img class="picture" src="assets/img/pic7.png" alt="art" />
+          <img class="picture" src="assets/img/pic8.png" alt="art" />
+          <img class="picture" src="assets/img/pic9.png" alt="art" />
+          <img class="picture" src="assets/img/pic10.png" alt="art" />
+          <img class="picture" src="assets/img/pic11.png" alt="art" />
+          <img class="picture" src="assets/img/pic12.png" alt="art" />
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <h2>About Us</h2>
         <p>
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -216,7 +231,7 @@
           </div>
         </div>
       </section>
-      <section class="get-a-quote">
+      <section class="get-a-quote" id="contact">
         <h2>Get a Quote</h2>
         <p>
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -224,23 +239,28 @@
           lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
           tortor mauris condimentum nibh.
         </p>
-        <form action="#">
+        <form action="#" name="contact">
           <div class="input-wrapper">
             <input
               type="text"
+              name="name"
+              autocomplete="off"
               placeholder="Name (Required)"
               pattern="[A-Za-z]+\s*[A-Za-z]*"
               required
             />
             <input
               type="email"
+              name="email"
+              autocomplete="off"
               placeholder="Email (Required)"
               pattern="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"
               required
             />
-            <input type="text" placeholder="Subject" />
+            <input type="text" name="subject" autocomplete="off" placeholder="Subject" />
             <textarea
-              name="project-details"
+              name="details"
+              autocomplete="off"
               id="project-description"
               cols="30"
               rows="13"
@@ -268,7 +288,7 @@
                 >
               </li>
             </ul>
-            <input type="submit" value="Submit" />
+            <input type="submit" name="submit" value="Submit" />
           </section>
         </form>
       </section>
@@ -284,5 +304,6 @@
         </div>
       </footer>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
