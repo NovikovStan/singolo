@@ -60,7 +60,7 @@ window.onload = function() {
     let errors = 0;
     if (
       !nameFormField.value ||
-      !/[A-Za-z\-]+\s*[A-Za-z\-]*/.test(nameFormField.value.trim())
+      !/[A-Za-zА-ЯЁа-яё\-]+\s*[A-Za-zА-ЯЁа-яё\-]*/.test(nameFormField.value.trim())
     ) {
       nameFormField.classList.add("invalid-input");
       errors++;
