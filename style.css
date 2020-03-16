@@ -104,11 +104,20 @@ header li:not(:nth-child(1)):before {
 }
 
 .message {
+  max-width: 50%;
   padding: 20px;
   box-sizing: border-box;
   margin: 0 auto;
 
   background-color: #fff;
+}
+
+.message p {
+  width: 100%;
+  text-align: justify;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .modal-button {
@@ -142,6 +151,7 @@ header li:not(:nth-child(1)):before {
 .slider i {
   padding-bottom: 7px;
 
+  font-size: 20px;
   color: #ca4549;
 }
 
@@ -485,6 +495,10 @@ header li:not(:nth-child(1)):before {
   overflow: hidden;
   margin-bottom: 20px;
 
+}
+
+.picture:hover {
+  cursor: pointer;
 }
 
 .picture:not(:nth-child(4n)) {

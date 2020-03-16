@@ -36,16 +36,11 @@ window.onload = function() {
       let portfolioImageArea = document.querySelector(".pictures");
       portfolioImageArea.appendChild(portfolioImage.cloneNode());
       portfolioImage.remove();
+      setPictureEvent();
     })
   );
 
-  let portfolioImages = document.querySelectorAll(".picture");
-  portfolioImages.forEach(el =>
-    el.addEventListener("click", event => {
-      portfolioImages.forEach(el => el.classList.remove("outlined"));
-      event.target.classList.add("outlined");
-    })
-  );
+  setPictureEvent();
 
   let form = document.forms.contact;
   let nameFormField = form.name;
@@ -54,7 +49,6 @@ window.onload = function() {
   let detailsFormField = form.details;
   let submitBtn = form.submit;
   let modal = document.querySelector(".modal");
-  let message = modal.querySelector(".message");
   [...form.elements].forEach(el =>
     el.addEventListener("change", () => {
       el.classList.remove("invalid-input");
@@ -82,6 +76,9 @@ window.onload = function() {
       errors++;
     }
     if (!errors) {
+      let message =document.createElement('div');
+      message.classList.add('message');
+      modal.appendChild(message);
       let messageHeading = document.createElement("p");
       messageHeading.textContent = "Письмо отправлено";
       message.appendChild(messageHeading);
@@ -89,12 +86,18 @@ window.onload = function() {
       let subjectMsg = document.createElement("p");
       if (!subjectFormField.value) {
         subjectMsg.textContent = "Без темы";
+      } else if (subjectFormField.value.length > 200) {
+        subjectMsg.textContent =
+          "Тема: " + subjectFormField.value.slice(0, 200);
       } else subjectMsg.textContent = "Тема: " + subjectFormField.value;
       message.appendChild(subjectMsg);
 
       let detailsMsg = document.createElement("p");
       if (!detailsFormField.value) {
         detailsMsg.textContent = "Без описания";
+      } else if (detailsFormField.value > 500) {
+        detailsMsg.textContent =
+          "Описание: " + detailsFormField.value.slice(0, 500);
       } else detailsMsg.textContent = "Описание: " + detailsFormField.value;
       message.appendChild(detailsMsg);
 
@@ -115,3 +118,13 @@ window.onload = function() {
     }
   });
 };
+
+function setPictureEvent() {
+  let portfolioImages = document.querySelectorAll(".picture");
+  portfolioImages.forEach(el =>
+    el.addEventListener("click", event => {
+      portfolioImages.forEach(el => el.classList.remove("outlined"));
+      event.target.classList.add("outlined");
+    })
+  );
+}
