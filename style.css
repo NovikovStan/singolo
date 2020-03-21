@@ -25,6 +25,8 @@ body {
   margin: 0 auto;
 
   font-family: 'Lato', sans-serif;
+
+  scroll-behavior: smooth;
 }
 
 header {
@@ -179,6 +181,7 @@ header li:not(:nth-child(1)):before {
 
 .slider-page-active {
   z-index: 100;
+
 }
 
 .slider-2 {

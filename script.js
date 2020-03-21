@@ -113,7 +113,6 @@ window.onload = function() {
         detailsFormField.value = "";
       });
       message.appendChild(btn);
-
       modal.classList.remove("hidden");
     }
   });
