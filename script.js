@@ -27,6 +27,10 @@ window.onload = function() {
     });
   });
 
+  document.querySelector(".burger-menu .burger-menu-icon").addEventListener("click", () => {
+    burgerModal.classList.add("hidden");
+  })
+
   document.querySelectorAll(".clickable").forEach(el => {
     el.addEventListener("click", event => {
       console.log(event);
