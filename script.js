@@ -9,23 +9,78 @@ window.onload = function() {
     });
   });
 
-  let sliderBtn = document.querySelectorAll(".slider-nav i");
-  let sliderPages = document.querySelectorAll(".slider-page");
-  sliderBtn.forEach(el =>
-    el.addEventListener("click", event => {
-      sliderPages.forEach(elem => elem.classList.toggle("slider-page-active"));
-    })
-  );
+  let burgerMenuIcon = document.querySelector(".burger-menu-icon");
+  let burgerModal = document.querySelector(".burger-modal");
+  burgerMenuIcon.addEventListener("click", () => {
+    burgerModal.classList.remove("hidden");
+    let burgerNavElems = document.querySelectorAll(".burger-menu .menu ul li");
+    let burgerNavActive = document.querySelector(
+      ".burger-menu .menu ul li.active"
+    );
+    burgerNavElems.forEach(el => {
+      el.addEventListener("click", event => {
+        burgerNavActive.classList.remove("active");
+        burgerNavActive = event.target.closest("LI");
+        event.target.closest("LI").classList.add("active");
+        burgerModal.classList.add("hidden");
+      });
+    });
+  });
 
-  let iphoneBtn = document.querySelectorAll(".iphone-button");
-  iphoneBtn.forEach(el =>
+  document.querySelectorAll(".clickable").forEach(el => {
     el.addEventListener("click", event => {
-      event.target
-        .closest(".iphone")
-        .querySelector(".screen")
-        .classList.toggle("bg-black");
-    })
-  );
+      console.log(event);
+
+      let bgVert = document.querySelectorAll(".vertical-bg");
+      let bgHor = document.querySelectorAll(".horisontal-bg");
+      if (
+        event.offsetX > 200 &&
+        event.offsetX < 240 &&
+        event.offsetY > 460 &&
+        event.offsetY < 500
+      ) {
+        bgVert.forEach(el => el.classList.toggle("black-bg"));
+      } else if (
+        event.offsetX > 430 &&
+        event.offsetX < 470 &&
+        event.offsetY > 260 &&
+        event.offsetY < 300
+      ) {
+        bgHor.forEach(el => el.classList.toggle("black-bg"));
+      }
+    });
+  });
+
+  let items = document.querySelectorAll(".slide");
+  let currentItem = 0;
+  let frontSlide = document.querySelector(".slider-img-1");
+  let backSlides = document.querySelectorAll(".slider-img-2");
+
+  document.querySelector(".right-arrow img").addEventListener("click", () => {
+    backSlides[currentItem].classList.add("from-right", "active");
+    currentItem = (currentItem + 1 + backSlides.length) % backSlides.length;
+    backSlides[currentItem].addEventListener("animationend", function() {
+      backSlides.forEach(el => {
+        console.log(el, backSlides[currentItem]);
+
+        if (el == backSlides[currentItem]) el.classList.remove("from-right");
+        else el.classList.remove("active");
+      });
+    });
+  });
+
+  document.querySelector(".left-arrow img").addEventListener("click", () => {
+    backSlides[currentItem].classList.add("from-left", "active");
+    currentItem = (currentItem + 1 + backSlides.length) % backSlides.length;
+    backSlides[currentItem].addEventListener("animationend", function() {
+      backSlides.forEach(el => {
+        console.log(el, backSlides[currentItem]);
+
+        if (el == backSlides[currentItem]) el.classList.remove("from-left");
+        else el.classList.remove("active");
+      });
+    });
+  });
 
   let portfolioNav = document.querySelectorAll(".portfolio-nav-btn");
   portfolioNav.forEach(el =>
@@ -60,7 +115,9 @@ window.onload = function() {
     let errors = 0;
     if (
       !nameFormField.value ||
-      !/[A-Za-zА-ЯЁа-яё\-]+\s*[A-Za-zА-ЯЁа-яё\-]*/.test(nameFormField.value.trim())
+      !/[A-Za-zА-ЯЁа-яё\-]+\s*[A-Za-zА-ЯЁа-яё\-]*/.test(
+        nameFormField.value.trim()
+      )
     ) {
       nameFormField.classList.add("invalid-input");
       errors++;
@@ -76,8 +133,8 @@ window.onload = function() {
       errors++;
     }
     if (!errors) {
-      let message =document.createElement('div');
-      message.classList.add('message');
+      let message = document.createElement("div");
+      message.classList.add("message");
       modal.appendChild(message);
       let messageHeading = document.createElement("p");
       messageHeading.textContent = "Письмо отправлено";
